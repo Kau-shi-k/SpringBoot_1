@@ -28,7 +28,15 @@ public class HelloWeb {
 
     @PostMapping("/Post")
     public String namePost(@RequestBody User user){
-        return "Hello" + user.getFirstName() + " " + user.getLastName() + " " + "!";
+        return "Hello" + " "  + user.getFirstName() + " " + user.getLastName() + " " + "!";
     }
+
+    @PutMapping("/put/{firstName}")
+    public String sayHello(@PathVariable String firstName, @RequestParam(value = "lastName") String lastName) {
+
+        return "Hello: " + firstName +  lastName + "!";
+
+    }
+
 }
 
