@@ -20,6 +20,9 @@ public class HelloWeb {
         return "Hello" + name + "!";
     }
 
-
+    @GetMapping("/param/{name}")
+    public String nameParam(@PathVariable String name){
+        return "Hello" + name + "!";
+    }
 }
 
